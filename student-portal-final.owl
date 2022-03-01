@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/satya/ontologies/2022/0/student-portal"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/satya/ontologies/2022/0/student-portal">
+    <Prefix name="" IRI="http://www.semanticweb.org/satya/ontologies/2022/0/student-portal"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#academicSession"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#branch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#btechStudent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#courses"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fees"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#gradeInCourse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#iddStudent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#result"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#student"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gets"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pays"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#takes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#acadFee"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#courseId"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cpi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#credits"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#email"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#grade"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#messFee"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#rollNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#semester"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#branch1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#course1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ec1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fees1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#result1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#session1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#session2"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#btechStudent"/>
+        <Class IRI="#student"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#iddStudent"/>
+        <Class IRI="#student"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#branch"/>
+        <NamedIndividual IRI="#branch1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#courses"/>
+        <NamedIndividual IRI="#course1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#fees"/>
+        <NamedIndividual IRI="#fees1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#btechStudent"/>
+        <NamedIndividual IRI="#p1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#result"/>
+        <NamedIndividual IRI="#result1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#academicSession"/>
+        <NamedIndividual IRI="#session1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#academicSession"/>
+        <NamedIndividual IRI="#session2"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#of"/>
+        <NamedIndividual IRI="#course1"/>
+        <NamedIndividual IRI="#branch1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#ec1"/>
+        <NamedIndividual IRI="#course1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#in"/>
+        <NamedIndividual IRI="#ec1"/>
+        <NamedIndividual IRI="#session1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#in"/>
+        <NamedIndividual IRI="#fees1"/>
+        <NamedIndividual IRI="#session1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsTo"/>
+        <NamedIndividual IRI="#p1"/>
+        <NamedIndividual IRI="#branch1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#gets"/>
+        <NamedIndividual IRI="#p1"/>
+        <NamedIndividual IRI="#result1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pays"/>
+        <NamedIndividual IRI="#p1"/>
+        <NamedIndividual IRI="#fees1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#takes"/>
+        <NamedIndividual IRI="#p1"/>
+        <NamedIndividual IRI="#ec1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#in"/>
+        <NamedIndividual IRI="#result1"/>
+        <NamedIndividual IRI="#session1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#branch1"/>
+        <Literal>Computer Science</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#courseId"/>
+        <NamedIndividual IRI="#course1"/>
+        <Literal>CSE-381</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#course1"/>
+        <Literal>Software Engineering</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grade"/>
+        <NamedIndividual IRI="#ec1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acadFee"/>
+        <NamedIndividual IRI="#fees1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">105000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#messFee"/>
+        <NamedIndividual IRI="#fees1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">14000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#p1"/>
+        <Literal>satya.prakash.cse19@itbhu.ac.in</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#p1"/>
+        <Literal>Satya Prakash</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rollNo"/>
+        <NamedIndividual IRI="#p1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">19075066</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cpi"/>
+        <NamedIndividual IRI="#result1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">9.38</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#semester"/>
+        <NamedIndividual IRI="#session1"/>
+        <Literal>odd</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#session1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2021</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#semester"/>
+        <NamedIndividual IRI="#session2"/>
+        <Literal>odd</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#year"/>
+        <NamedIndividual IRI="#session2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2010</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsTo"/>
+        <Class IRI="#student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#gets"/>
+        <Class IRI="#student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#gradeInCourse"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#in"/>
+        <Class IRI="#fees"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#in"/>
+        <Class IRI="#gradeInCourse"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#in"/>
+        <Class IRI="#result"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#of"/>
+        <Class IRI="#courses"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pays"/>
+        <Class IRI="#student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#takes"/>
+        <Class IRI="#student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsTo"/>
+        <Class IRI="#branch"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#gets"/>
+        <Class IRI="#result"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#courses"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#in"/>
+        <Class IRI="#academicSession"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#of"/>
+        <Class IRI="#branch"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pays"/>
+        <Class IRI="#fees"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#takes"/>
+        <Class IRI="#gradeInCourse"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#acadFee"/>
+        <Class IRI="#fees"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#courseId"/>
+        <Class IRI="#courses"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cpi"/>
+        <Class IRI="#result"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#credits"/>
+        <Class IRI="#courses"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#email"/>
+        <Class IRI="#student"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#grade"/>
+        <Class IRI="#gradeInCourse"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#messFee"/>
+        <Class IRI="#fees"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#branch"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#courses"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#student"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#rollNo"/>
+        <Class IRI="#student"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#semester"/>
+        <Class IRI="#academicSession"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#year"/>
+        <Class IRI="#academicSession"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#acadFee"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#courseId"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cpi"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#credits"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#email"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#grade"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#messFee"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#rollNo"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#semester"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#year"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
