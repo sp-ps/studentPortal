@@ -258,6 +258,24 @@ public class OWLAPIFirst {
         OWLObjectPropertyRangeAxiom dr15 = df.getOWLObjectPropertyRangeAxiom(hasGradeInCourse, gradeInCourse);
         o.add(dr15);
 
+        // add a Student individual to the ontology
+        OWLIndividual student1 = df.getOWLNamedIndividual(IOR+"#Student1");
+        OWLClassAssertionAxiom ca1 = df.getOWLClassAssertionAxiom(student, student1);
+        // student1 has a property of hasName with value "Satya"
+        OWLDataPropertyAssertionAxiom da1 = df.getOWLDataPropertyAssertionAxiom(hasName, student1, "Satya");
+        // student1 has a property of hasRollNo with value "19075066"
+        OWLDataPropertyAssertionAxiom d2 = df.getOWLDataPropertyAssertionAxiom(hasRollNo, student1, "19075066");
+
+        // add data property assertions to the ontology
+        o.add(da1);
+        o.add(d2);
+        // add the axioms to the ontology
+        o.add(ca1);
+
+        // get the individual with the given rollNo
+        OWLNamedIndividual rollNo = df.getOWLNamedIndividual(IOR+"#19075066");
+
+
 
         // print every axiom in the ontology
         o.logicalAxioms().forEach(System.out::println);
@@ -286,3 +304,4 @@ public class OWLAPIFirst {
     }
 
 }
+
