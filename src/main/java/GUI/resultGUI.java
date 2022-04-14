@@ -151,13 +151,19 @@ public class resultGUI extends JFrame implements ActionListener {
         // add button to panel
         panel.add(button);
 
+        // create exit button
+
+        backButton = new JButton(new AbstractAction("Back") {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new facilities(propertiesMap, coursesMap);
+            }
         });
-        // set size of button
-        button.setSize(100,40);
-        // set location of button
-        button.setLocation(10,150);
-        // add button to panel
-        panel.add(button);
+        backButton.setSize(100,40);
+        backButton.setLocation(100,150);
+        panel.add(backButton);
+
+
 
 
     }
