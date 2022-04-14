@@ -19,6 +19,9 @@ public class resultGUI extends JFrame implements ActionListener {
     private JFrame frame;
     private JPanel panel;
 
+    // button for back to the main menu
+    private JButton backButton;
+
 
     public resultGUI(HashMap<String, String> propertiesMap , Map<Integer, ArrayList<ArrayList<String>>> coursesMap) {
 
@@ -128,32 +131,25 @@ public class resultGUI extends JFrame implements ActionListener {
                     selectedSemester = "1";
                 // create new resultGUI
                 Integer key = Integer.parseInt(selectedYear) * 10 + Integer.parseInt(selectedSemester);
-                ArrayList<ArrayList<String>> courses = coursesMap.get(key);
-                int x = 0;
-                for( ArrayList<String> course : courses){
-                    JLabel courseName = new JLabel(course.get(0));
-                    courseName.setSize(200,50);
-                    courseName.setLocation(10,200 + x );
-                    panel.add(courseName);
-                    JLabel courseId = new JLabel(course.get(1));
-                    courseId.setSize(50 ,50);
-                    courseId.setLocation(220,200 + x );
-                    panel.add(courseId);
-                    JLabel CourseCredit = new JLabel(course.get(2));
-                    CourseCredit.setSize(50,50);
-                    CourseCredit.setLocation(270,200 + x );
-                    panel.add(CourseCredit);
-                    JLabel CourseGrade = new JLabel(course.get(3));
-                    CourseGrade.setSize(50,50);
-                    CourseGrade.setLocation(320,200 + x );
-                    panel.add(CourseGrade);
-                    x += 50;
-
-                    // print the result in single line
-                    System.out.println(course.get(0) + " " + course.get(1) + " " + course.get(2) + " " + course.get(3));
+                // if coursesMap contains the selected year and semester
+                if(!coursesMap.containsKey(key))
+                    JOptionPane.showMessageDialog(null, "No course taken in this session");
+                else
+                {
+                    // get courses from coursesMap
+                    ArrayList<ArrayList<String>> courses = coursesMap.get(key);
+                    new gradeScreen(propertiesMap.get("hasName"), propertiesMap.get("hasRollNo"), courses);
                 }
 
             }
+
+        });
+        // set size of button
+        button.setSize(100,40);
+        // set location of button
+        button.setLocation(10,150);
+        // add button to panel
+        panel.add(button);
 
         });
         // set size of button

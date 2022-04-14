@@ -106,7 +106,8 @@ public class studentGUI extends JFrame implements ActionListener {
                 // create a new frame
                 frame.dispose();
                 // create a new frame
-                new resultGUI(propertiesMap, coursesMap);
+                //new resultGUI(propertiesMap, coursesMap);
+                new facilities(propertiesMap, coursesMap);
             }
         });
         // set size of button
