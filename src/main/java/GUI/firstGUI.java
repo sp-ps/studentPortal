@@ -260,7 +260,7 @@ public class firstGUI extends JFrame  {
 
 
         // button to generate all classes and its instances
-        JButton button2 = new JButton(new AbstractAction("Generate Classes and Instances") {
+        JButton button2 = new JButton(new AbstractAction("Generate Classes") {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(null, "Report has been created");
@@ -323,6 +323,11 @@ public class firstGUI extends JFrame  {
                     }
                     bw.close();
 
+                    frame.dispose();
+
+                    // open firstGUI window
+                    new firstGUI();
+
 
 
 
@@ -340,6 +345,8 @@ public class firstGUI extends JFrame  {
         frame.add(panel);
         frame.setVisible(true);
         panel.setVisible(true);
+
+
 
 
 
